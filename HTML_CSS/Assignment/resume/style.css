@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+}
+
+h1 {
+    color: red;
+}
+
+h3 {
+    color: brown;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+span {
+    color: green;
+}
+
+a:hover {
+    color: brown;
+}
+
+.custom-font {
+    font-weight: bolder;
+}
+
+section ol li,
+section ul li {
+    transition: background-color 0.1s, color 1s;
+}
+
+section ol li:hover,
+section ul li:hover {
+    background-color: rgb(219, 218, 218);
+    color: #333;
+}
