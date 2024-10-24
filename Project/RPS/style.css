@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-color: #453143;
+}
+
+
+
+.Main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+/*| SCORE BOARD | */
+
+.ScoreCard {
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 13px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.textArea {
+    flex: 1;
+    color: indianred;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 12px;
+
+}
+
+
+.Score {
+    background: transparent;
+    border-radius: 12px;
+    border: 2px solid wheat;
+    width: 140px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+
+}
+
+.Computer {
+    margin-right: 13px;
+}
+
+.Your {
+    margin-right: 13px;
+}
+
+.Computer>p,
+.Your>p {
+    color: orange;
+    font-weight: 900;
+
+}
+
+.Computer>span,
+.Your>span {
+    color: rgba(215, 11, 215, 0.902);
+    font-size: 40px;
+    font-weight: 400;
+
+}
+
+
+
+/* | PlayArea | */
+
+#PlayArea {
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 50%;
+}
+
+/* | TRIANGLE LINES | */
+
+.TriangleLines-2 {
+    transform: rotate(120deg);
+    position: relative;
+    left: 70px;
+    top: 95px;
+}
+
+.TriangleLines-3 {
+    transform: rotate(60deg);
+    position: relative;
+    right: 80px;
+    top: 110px;
+
+}
+
+.line {
+    width: 300px;
+    height: 0px;
+    border: 7px solid #000000a3;
+}
+
+/*| ACTIONS | */
+
+.StartGame {
+    position: relative;
+    right: 130%;
+}
+
+.start {
+    width: 150px;
+    height: 150px;
+    background-color: #ffff;
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+
+}
+
+#rock,
+#paper,
+#scissor {
+    cursor: pointer;
+
+}
+
+#rock img:hover,
+#paper img:hover,
+#scissor img:hover {
+    transform: scale(1.3);
+
+}
+
+
+#rock {
+    position: relative;
+    bottom: 120px;
+    left: 230px;
+
+}
+
+
+.rock-click {
+    border: 13px solid #0074b6;
+
+}
+
+#rock:hover {
+    border: 13px solid #0074b6;
+    box-shadow: none;
+    transition: all 0.01s ease-in-out;
+
+}
+
+#scissor {
+    position: relative;
+    left: 380px;
+    bottom: 205px;
+
+}
+
+.scissor-click {
+    border: 13px solid #bd00ff;
+
+}
+
+#scissor:hover {
+    border: 13px solid #bd00ff;
+    box-shadow: none;
+    transition: all 0.01s ease-in-out;
+
+}
+
+#paper {
+    transform: rotate(5.27deg);
+    position: relative;
+    bottom: 270px;
+    left: 530px;
+}
+
+.paper-click {
+    border: 13px solid #ffa943;
+
+}
+
+#paper:hover {
+    border: 13px solid #ffa943;
+    box-shadow: none;
+    transition: all 0.01s ease-in-out;
+
+}
+
+/*| ResultPage |*/
+
+#ResultPage {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    display: none;
+
+}
+
+.Result {
+    text-align: center;
+    font-weight: 500;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: peachpuff;
+
+}
+
+.ResultImg {
+    width: 200px !important;
+    height: 200px !important;
+
+}
+
+#Result_1 {
+    font-size: 20px;
+}
+
+#Result_2 {
+    font-size: 20px;
+}
+
+/* | BOXES | */
+
+.boxes {
+    border-radius: 50%;
+}
+
+.winner-3 {
+    padding: 20px;
+    background-color: #dc16163c;
+}
+
+.winner-2 {
+    padding: 20px;
+    background-color: #dc16163c;
+}
+
+.winner-1 {
+    padding: 20px;
+    background-color: #dc16163c;
+
+}
+
+/*| PICKED DIV | */
+
+.picked {
+    position: absolute;
+    z-index: 1;
+    color: rgba(20, 10, 10, 0.712);
+    font-weight: 500;
+
+}
+
+.pick {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*|  BUTTONS  | */
+
+.buttons {
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+
+.buttn {
+    background: beige;
+    color: black;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 3px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.buttn:hover {
+    background-color: palevioletred;
+    color: palegreen;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.btn {
+    background: beige;
+    color: red;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    margin-top: 16px;
+
+}
+
+.playAgain {
+    font-size: 22px !important;
+    padding: 12px 30px !important;
+
+}
+
+.btn:hover {
+    background-color: powderblue;
+    color: black;
+    border: 2px solid #ffff;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#play-again {
+    display: block;
+
+}
+
+#replay {
+    padding: 7px 28px !important;
+    display: none;
+
+}
+
+#next-btn {
+    display: none;
+    margin-left: 10px;
+
+}
+
+
+
+/* |  RULES MODAL  | */
+
+#rules-modal {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    border: 3px solid darkorange;
+    width: 290px;
+    color: white;
+    background-color: #004429;
+    border: 7px solid whitesmoke;
+    border-radius: 13px;
+    padding: 28px;
+    z-index: 7;
+    display: none;
+    animation-duration: 0.5s;
+
+}
+
+.close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: -31px;
+    top: -29px;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.close:hover {
+    border: 3px solid #ffffff;
+    background-color: #dd0303;
+
+}
+
+#rules-modal h3 {
+    margin-bottom: 14px;
+    font-size: 22px;
+    text-align: center;
+
+}
+
+.rules li svg {
+    margin-right: 7px;
+
+}
+
+.rules li {
+    font-size: 14px;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 6px;
+    letter-spacing: 0.008em;
+    text-align: justify;
+    z-index: 4;
+}
+
+/* animation */
+
+@keyframes closeModal {
+    0% {
+        right: 25px;
+    }
+
+    100% {
+        right: 40px;
+
+    }
+}
+
+
+/*|  WON GAME  | */
+
+.game_won {
+    background-color: #453143;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+    color: #ffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.WonGame {
+    font-weight: 600;
+    font-size: 6rem;
+
+}
+
+.wonGame {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+#stars {
+    position: absolute;
+    top: 40px;
+}
+
+#trophy {
+    margin-top: 75px;
+    margin-bottom: 22px;
+
+}
